@@ -1,0 +1,101 @@
+// Projects data.
+// Note: Here we are getting data from a js file, but in a different project I'll be fetching these projects from some srt of APIs.
+
+const projects = [
+	{
+		id: 1,
+		author: 'J. Jones',
+		title: 'New future',
+		category: 'Web Application',
+		img: require('@/assets/images/VideoBg.png'),
+		link: 'https://img.youtube.com/vi/Dnweo-LQZLU/maxresdefault.jpg',
+		// link: 'https://www.youtube.com/embed/Dnweo-LQZLU',
+	},
+	{
+		id: 2,
+		author: 'S.Milev',
+		title: 'Love',
+		category: 'Web Application',
+		img: require('@/assets/images/VideoBg.png'),
+		link: 'https://img.youtube.com/vi/IGmP-66Yyiw/maxresdefault.jpg',
+		// link: 'https://www.youtube.com/embed/G11wOmxoJ6U',
+	},
+	{
+		id: 3,
+		author: 'B.Boev',
+		title: 'Flowers',
+		category: 'API',
+		img: require('@/assets/images/VideoBg.png'),
+		link: 'https://img.youtube.com/vi/w_0aNAv2L-k/maxresdefault.jpg',
+		// link: 'https://www.youtube.com/embed/w_0aNAv2L-k',
+	},
+	{
+		id: 4,
+		author: 'H.Georgiev',
+		title: 'Blue sea',
+		category: 'Microservice',
+		img: require('@/assets/images/VideoBg.png'),
+		link: 'https://img.youtube.com/vi/vuObcCoXLok/maxresdefault.jpg',
+		// link: 'https://www.youtube.com/embed/vuObcCoXLok',
+	},
+	{
+		id: 5,
+		author: 'T.Keihard',
+		title: 'Posible',
+		category: 'Mobile Case',
+		img: require('@/assets/images/VideoBg.png'),
+		link: 'https://img.youtube.com/vi/1POuMECG_tw/maxresdefault.jpg',
+		// link: 'https://www.youtube.com/embed/1POuMECG_tw',
+	},
+	// {
+	// 	id: 6,
+	// 	title: 'POS Camcyber',
+	// 	category: 'Web Application',
+	// 	img: require('@/assets/images/VideoBg.png'),
+	// 	link: 'https://www.youtube.com/embed/KDjaAkD5J8g',
+	// },
+	// {
+	// 	id: 7,
+	// 	title: 'I.Jason 2',
+	// 	category: 'Web Application',
+	// 	img: require('@/assets/images/VideoBg.png'),
+	// 	link: 'https://www.youtube.com/embed/yBK4RBRj1U8',
+	// },
+	// {
+	// 	id: 8,
+	// 	title: 'S. Koles 2',
+	// 	category: 'Web Application',
+	// 	img: require('@/assets/images/VideoBg.png'),
+	// 	link: 'https://www.youtube.com/embed/82mA_f4jcV8',
+	// },
+	// {
+	// 	id: 9,
+	// 	title: 'A.Atanasov 2',
+	// 	category: 'API',
+	// 	img: require('@/assets/images/VideoBg.png'),
+	// 	link: 'https://www.youtube.com/embed/ZLUX3AI2Uic',
+	// },
+	// {
+	// 	id: 10,
+	// 	title: 'Staff Management 2',
+	// 	category: 'Microservice',
+	// 	img: require('@/assets/images/VideoBg.png'),
+	// 	link: 'https://www.youtube.com/embed/p7iDtyzEMCk',
+	// },
+	// {
+	// 	id: 11,
+	// 	title: 'SportDate 2',
+	// 	category: 'Mobile Application',
+	// 	img: require('@/assets/images/VideoBg.png'),
+	// 	link: 'https://www.youtube.com/embed/IGmP-66Yyiw',
+	// },
+	// {
+	// 	id: 12,
+	// 	title: 'POS Camcyber 2',
+	// 	category: 'Web Application',
+	// 	img: require('@/assets/images/VideoBg.png'),
+	// 	link: 'https://www.youtube.com/embed/wI1wHcUv7R4',
+	// },
+];
+
+export default projects;
