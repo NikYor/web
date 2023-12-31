@@ -42,7 +42,7 @@ export default {
 			<div class="hidden ml-5 center lg:inline">
 					<img class="p-0 m-auto"
 					v-if="theme === 'light'"
-					:src="`/images${$route.path}.png`"
+					:src="`/images${$route.path == '/artist' ? '/artists' : $route.path}.png`"
 					alt="Developer"
 					width="1000"
 			/>

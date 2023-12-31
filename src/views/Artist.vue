@@ -17,15 +17,14 @@ export default {
 		return {
 			apiLink: process.env.VUE_APP_API_LINK,
 			artistData: {},
-			clientip: '',
-            artist: {}
-			
+			clientip: '',			
 		};
 	},
 	async mounted(){
+
 		const loader = this.$loading.show({ loader: 'bars', color: '#0000FF',});
 
-			this.getLastUploaded = await axios.get(`${this.apiLink}/api/Web/GetArtistInfo/7cee6765-1e51-452b-a101-c16903799182`)
+			this.getLastUploaded = await axios.get(`${this.apiLink}/api/Web/GetArtistInfo/${JSON.parse(this.$route.params.param)}`)
 
 			.then(res => {
 
@@ -33,8 +32,8 @@ export default {
 
 				if( res.status == 200){
 					loader.hide();
-					this.artistData  = res.data
-					console.log(res.data)
+					this.artistData = res.data
+					// console.log(res.data)
 					// return res.data
 				}
 				else{
