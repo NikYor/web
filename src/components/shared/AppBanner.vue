@@ -62,7 +62,7 @@ export default {
 				</div>
 				<div class = "w-full mt-4 rup">
 					<router-link
-						to="/projects"
+						to="/artists"
 						class="font_links"
 					>
 					&#8729; Artists<br>

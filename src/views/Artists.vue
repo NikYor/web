@@ -163,35 +163,38 @@ export default {
 </script>
 
 <template >
-	<div class="mx-auto my-10 body_text">
-		<button class="mr-10 font_links" :class="{ 'active-link': alpha }" @click=alfabetSort()>Азбучен ред</button>
-		<button class="mr-10 font_links" :class="{ 'active-link': mostVies }" @click="mostViewed()">Най-гледани</button>
-		<button class="font_links" :class="{ 'active-link': mostArt }" @click="mostArts()">Най-много творби</button>
-		
-	</div>
-	<div class="flex flex-wrap">
-		<div v-for="(item, index) in currentPageData" :key="index" class="flex items-start w-1/2 p-2">
-			<img :src="item.avatarLink" class="w-1/4 h-auto mb-3 rounded-lg shadow-lg" />
-			<div class="w-full ml-10 text-left body_text">
-				<p class="hidden md:block">Фамилия: {{ item.lastName }}</p>
-				<p class="hidden md:block">Държава: {{ item.countryName }}</p>
-				<p class="hidden md:block">Контакти:</p>
-				<p class="hidden md:block">Брой творби: {{ item.artistArtworkCount }}</p>
-				<p class="hidden md:block">Описание за профила: </p>
-				<p class="ml-5 mr-4 text-right small-font md:body_text" @click="details(item)"> Виж още...</p>
+	<div class="container mx-auto">
+
+		<div class="mx-auto my-10 body_text">
+			<button class="mr-10 font_links" :class="{ 'active-link': alpha }" @click=alfabetSort()>Азбучен ред</button>
+			<button class="mr-10 font_links" :class="{ 'active-link': mostVies }" @click="mostViewed()">Най-гледани</button>
+			<button class="font_links" :class="{ 'active-link': mostArt }" @click="mostArts()">Най-много творби</button>
+			
+		</div>
+		<div class="flex flex-wrap">
+			<div v-for="(item, index) in currentPageData" :key="index" class="flex items-start w-1/2 p-2">
+				<img :src="item.avatarLink" class="w-1/4 h-auto mb-3 rounded-lg shadow-lg" />
+				<div class="w-full ml-10 text-left body_text">
+					<p class="hidden md:block">Фамилия: {{ item.lastName }}</p>
+					<p class="hidden md:block">Държава: {{ item.countryName }}</p>
+					<p class="hidden md:block">Контакти:</p>
+					<p class="hidden md:block">Брой творби: {{ item.artistArtworkCount }}</p>
+					<p class="hidden md:block">Описание за профила: </p>
+					<p class="ml-5 mr-4 text-right small-font md:body_text" @click="details(item)"> Виж още...</p>
+				</div>
 			</div>
 		</div>
+		<div class="flex justify-end mr-32 body_text">
+			<button class="mx-auto mr-10 small-font md:body_text" @click="prevPage" :disabled="currentPage == 1">Previous</button>
+			<Pagination :currentPage="currentPage" :totalPages="totalPages" class="justify-end small-font md:body_text"/>
+			<button class="small-font md:body_text" @click="nextPage" :disabled="currentPage == totalPages">Next</button>
+		</div>
 	</div>
-	<div class="flex justify-end mr-32 body_text">
-		<button class="mx-auto mr-10 small-font md:body_text" @click="prevPage" :disabled="currentPage == 1">Previous</button>
-		<Pagination :currentPage="currentPage" :totalPages="totalPages" class="justify-end small-font md:body_text"/>
-		<button class="small-font md:body_text" @click="nextPage" :disabled="currentPage == totalPages">Next</button>
-	</div>
-</template>
+	</template>
 
 <style scoped>
 .active-link {
-		color: #000; /* Add your desired color for active links */
+	color: #000; /* Add your desired color for active links */
 }
 .small-font {
 	font-size: 1.5rem;
